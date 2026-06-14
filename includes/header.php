@@ -1,7 +1,6 @@
 <?php 
 include_once 'config.php'; 
 
-// Определение языка
 $lang = $_GET['lang'] ?? null;
 if (!$lang) {
     $acceptLang = $_SERVER['HTTP_ACCEPT_LANGUAGE'] ?? 'ro';
@@ -27,23 +26,27 @@ $translations = file_exists($lang_file) ? include $lang_file : include 'lang/ro.
 </head>
 <body>
     <header>
-        <div class="container">
+        <div class="container header-inner">
             <div class="logo">
                 <img src="assets/images/logo.png" alt="WATCHPLUS">
             </div>
+            
             <nav>
-                <ul>
+                <ul id="nav-menu">
                     <li><a href="#about"><?= $translations['about_title'] ?></a></li>
                     <li><a href="#services"><?= $translations['services_title'] ?></a></li>
                     <li><a href="#contact"><?= $translations['contact_title'] ?></a></li>
                 </ul>
             </nav>
-            
-            <!-- Переключатель языков -->
+
             <div class="lang-switch">
                 <a href="?lang=en" <?= $lang === 'en' ? 'class="active"' : '' ?>>EN</a>
                 <a href="?lang=ru" <?= $lang === 'ru' ? 'class="active"' : '' ?>>RU</a>
                 <a href="?lang=ro" <?= $lang === 'ro' ? 'class="active"' : '' ?>>RO</a>
             </div>
+
+            <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Menu">
+                <i class="fas fa-bars"></i>
+            </button>
         </div>
     </header>

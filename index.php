@@ -15,9 +15,7 @@
     <div class="container">
         <h2><?= $translations['about_title'] ?></h2>
         <div class="about-text">
-            <p><?= $translations['about_text_1'] ?></p>
-            <p><?= $translations['about_text_2'] ?></p>
-            <p><?= $translations['about_text_3'] ?></p>
+            <?= $translations['about_text'] ?>
         </div>
     </div>
 </section>
@@ -30,44 +28,44 @@
             
             <div class="service-card">
                 <img src="assets/images/service1.png" alt="">
-                <h3>Строительство телекоммуникационных сетей</h3>
-                <p>Проектирование и прокладка оптоволоконных линий связи любой сложности.</p>
+                <h3><?= $translations['service1_title'] ?></h3>
+                <p><?= $translations['service1_desc'] ?></p>
             </div>
 
             <div class="service-card">
                 <img src="assets/images/service2.png" alt="">
-                <h3>Обслуживание телекоммуникационных сетей</h3>
-                <p>Регулярное техническое обслуживание и оперативное устранение неисправностей.</p>
+                <h3><?= $translations['service2_title'] ?></h3>
+                <p><?= $translations['service2_desc'] ?></p>
             </div>
 
             <div class="service-card">
                 <img src="assets/images/service3.png" alt="">
-                <h3>Подключение абонентов</h3>
-                <p>Подключение частных и корпоративных клиентов к интернету и ТВ.</p>
+                <h3><?= $translations['service3_title'] ?></h3>
+                <p><?= $translations['service3_desc'] ?></p>
             </div>
 
             <div class="service-card">
                 <img src="assets/images/service4.png" alt="">
-                <h3>Системы видеонаблюдения</h3>
-                <p>Проектирование и установка систем видеонаблюдения для объектов любой сложности.</p>
+                <h3><?= $translations['service4_title'] ?></h3>
+                <p><?= $translations['service4_desc'] ?></p>
             </div>
 
             <div class="service-card">
                 <img src="assets/images/service5.png" alt="">
-                <h3>Системы контроля доступа и учета персонала</h3>
-                <p>Разработка и внедрение решений для безопасного управления доступом.</p>
+                <h3><?= $translations['service5_title'] ?></h3>
+                <p><?= $translations['service5_desc'] ?></p>
             </div>
 
             <div class="service-card">
                 <img src="assets/images/service6.png" alt="">
-                <h3>Системы домофонии</h3>
-                <p>Монтаж и настройка аудио- и видеодомофонов для жилых и коммерческих зданий.</p>
+                <h3><?= $translations['service6_title'] ?></h3>
+                <p><?= $translations['service6_desc'] ?></p>
             </div>
 
             <div class="service-card">
                 <img src="assets/images/service7.png" alt="">
-                <h3>Системы безопасности</h3>
-                <p>Комплексные решения по охране объектов и предотвращению угроз.</p>
+                <h3><?= $translations['service7_title'] ?></h3>
+                <p><?= $translations['service7_desc'] ?></p>
             </div>
 
         </div>
@@ -77,6 +75,21 @@
 <!-- Contact -->
 <section id="contact" class="contact">
     <div class="container">
+    <?php if (isset($_GET['status'])): ?>
+    <div class="alert <?php echo $_GET['status'] === 'success' ? 'alert-success' : 'alert-error'; ?>">
+        <?php 
+        if ($_GET['status'] === 'success') {
+            echo $lang === 'ru' ? 'Спасибо! Ваше сообщение успешно отправлено.' : 
+                 ($lang === 'ro' ? 'Mulțumim! Mesajul a fost trimis cu succes.' : 
+                 'Thank you! Your message has been sent successfully.');
+        } else {
+            echo $lang === 'ru' ? 'Ошибка при отправке. Попробуйте позже.' : 
+                 ($lang === 'ro' ? 'Eroare la trimitere. Încercați mai târziu.' : 
+                 'Error sending message. Please try again later.');
+        }
+        ?>
+    </div>
+<?php endif; ?>
         <h2><?= $translations['contact_title'] ?></h2>
         <div class="contact-grid">
             <div class="contact-info">
