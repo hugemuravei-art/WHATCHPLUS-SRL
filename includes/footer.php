@@ -6,7 +6,6 @@ global $translations; // чтобы переводы были доступны
         <div class="container">
             <div class="footer-content">
                 <p>&copy; <?= date("Y") ?> <?= SITE_FULL_NAME ?>. All Rights Reserved.</p>
-                <p><?= ADDRESS ?></p>
             </div>
         </div>
     </footer>

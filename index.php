@@ -4,7 +4,7 @@
 <section class="hero">
     <div class="hero-overlay"></div>
     <div class="hero-content">
-        <h1><?= $translations['welcome'] ?> <span class="orange">WATCHPLUS</span></h1>
+        <h1><?= $translations['welcome'] ?> <span class="orange">WATCH</span><span>PLUS</span></h1>
         <p><?= $translations['hero_subtitle'] ?></p>
         <a href="#contact" class="btn"><?= $translations['btn_contact'] ?></a>
     </div>
@@ -25,7 +25,7 @@
     <div class="container">
         <h2><?= $translations['services_title'] ?></h2>
         <div class="services-grid">
-            
+            <!-- Need to change the layout to match the porototype -->
             <div class="service-card">
                 <img src="assets/images/service1.png" alt="">
                 <h3><?= $translations['service1_title'] ?></h3>
@@ -95,9 +95,10 @@
             <div class="contact-info">
                 <p><i class="fas fa-envelope"></i> sales@watchplus.md</p>
                 <p><i class="fas fa-phone"></i> <?= PHONE ?></p>
-                <p><i class="fas fa-map-marker-alt"></i> <?= ADDRESS ?></p>
+                <p><i class="fas fa-map-marker-alt"></i> <?= LEGAL_ADDRESS ?></p>
+                <p><i class="fas fa-map-marker-alt"></i> <?= OFFICE_ADDRESS ?></p>
             </div>
-            
+            <!-- icons needs to be changed -->
             <form action="mail/send.php" method="POST" class="contact-form">
                 <input type="text" name="name" placeholder="<?= $translations['name_placeholder'] ?>" required>
                 <input type="email" name="email" placeholder="<?= $translations['email_placeholder'] ?>" required>

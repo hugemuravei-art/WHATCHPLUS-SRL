@@ -52,7 +52,7 @@ nav a {
 }
 
 nav a:hover {
-    color: #FF6600;
+    color: #F2AC70;
 }
 
 .lang-switch {
@@ -71,7 +71,7 @@ nav a:hover {
 
 .lang-switch a:hover,
 .lang-switch a.active {
-    color: #FF6600;
+    color: #F2AC70;
     background: #fff0e6;
 }
 
@@ -107,7 +107,7 @@ nav a:hover {
 }
 
 .hero .orange {
-    color: #FF8800;
+    color: #F2AC70;
 }
 
 .hero p {
@@ -120,7 +120,7 @@ nav a:hover {
 
 .btn {
     display: inline-block;
-    background: #FF6600;
+    background: #F2AC70;
     color: white;
     padding: 16px 38px;
     border-radius: 50px;
@@ -137,13 +137,17 @@ nav a:hover {
 }
 
 /* ================= ABOUT ================= */
+/* neet to change the text to be on the left side like in the prototype */
+
 .about {
+    font-family: 'Jost', system-ui, sans-serif;
+    font-weight: 200;
     padding: 110px 0;
     background: #f8f9fa;
 }
 
 .about h2 {
-    text-align: center;
+    text-align: left;
     font-size: 2.6rem;
     margin-bottom: 50px;
     color: #222;
@@ -154,22 +158,29 @@ nav a:hover {
     display: block;
     width: 90px;
     height: 4px;
-    background: #FF6600;
-    margin: 15px auto;
+    background: #F2AC70;
+    margin: 15px 0 0 0;
 }
 
 .about-text {
-    max-width: 950px;
     margin: 0 auto;
-    font-size: 1.08rem;
+    font-size: 1.25rem;
     line-height: 1.8;
 }
 
-.about-text strong {
-    color: #FF6600;
+.text-watch {
+    color: #F2AC70; 
+    font-weight: 400;
 }
 
+.text-plus {
+    color: #69728D;
+    font-weight: 400;
+}
+
+
 /* ================= SERVICES ================= */
+/*need to change the layout to match the prototype */
 .services {
     padding: 110px 0;
     background: #0f172a;
@@ -177,6 +188,8 @@ nav a:hover {
 }
 
 .services h2 {
+    font-family: 'Jost', system-ui, sans-serif;
+    font-weight: 200;
     text-align: center;
     font-size: 2.6rem;
     margin-bottom: 70px;
@@ -277,7 +290,7 @@ nav a:hover {
 }
 
 .contact-info i {
-    color: #FF6600;
+    color: #F2AC70;
     width: 28px;
 }
 
