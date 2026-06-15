@@ -5,8 +5,8 @@
 }
 
 body {
-    font-family: 'Inter', system-ui, sans-serif;
-    line-height: 1.7;
+    font-family: 'Jost', sans-serif;
+    line-height: 1.75;
     color: #333;
 }
 
@@ -52,7 +52,7 @@ nav a {
 }
 
 nav a:hover {
-    color: #F2AC70;
+    color: #FF6600;
 }
 
 .lang-switch {
@@ -71,7 +71,7 @@ nav a:hover {
 
 .lang-switch a:hover,
 .lang-switch a.active {
-    color: #F2AC70;
+    color: #FF6600;
     background: #fff0e6;
 }
 
@@ -107,7 +107,7 @@ nav a:hover {
 }
 
 .hero .orange {
-    color: #F2AC70;
+    color: #F2AC70;           /* WATCHPLUS в hero */
 }
 
 .hero p {
@@ -131,65 +131,77 @@ nav a:hover {
 }
 
 .btn:hover {
-    background: #e55a00;
+    background: #F2AC70;
     transform: translateY(-4px);
     box-shadow: 0 10px 20px rgba(255, 102, 0, 0.3);
 }
 
 /* ================= ABOUT ================= */
-/* neet to change the text to be on the left side like in the prototype */
-
 .about {
-    font-family: 'Jost', system-ui, sans-serif;
-    font-weight: 200;
-    padding: 110px 0;
+    padding: 120px 0 100px;
     background: #f8f9fa;
 }
 
 .about h2 {
     text-align: left;
-    font-size: 2.6rem;
-    margin-bottom: 50px;
-    color: #222;
+    font-size: 2.35rem;
+    font-weight: 700;
+    color: #1f1f1f;
+    margin-bottom: 40px;
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+    position: relative;
+    display: inline-block;
 }
 
+/* Анимированная линия */
 .about h2:after {
     content: '';
-    display: block;
-    width: 90px;
+    position: absolute;
+    bottom: -16px;
+    left: 0;
+    width: 0;
     height: 4px;
-    background: #F2AC70;
-    margin: 15px 0 0 0;
+    background: linear-gradient(to right, #FD7E1E, #F2AC70);
+    animation: lineGrow 1.6s ease-out forwards;
+}
+
+@keyframes lineGrow {
+    from { width: 0; }
+    to { width: 100%; }
 }
 
 .about-text {
+    max-width: 1050px;
     margin: 0 auto;
-    font-size: 1.25rem;
-    line-height: 1.8;
+    font-family: 'Inter', sans-serif;     /* ← Inter, как просила */
+    font-size: 1.08rem;
+    line-height: 1.9;
+    color: #444;
 }
 
-.text-watch {
-    color: #F2AC70; 
-    font-weight: 400;
+.about-text p {
+    margin-bottom: 26px;
 }
 
-.text-plus {
+/* WATCHPLUS в двух цветах */
+.about-text strong.watch {
+    color: #F38D36;
+}
+
+.about-text strong.plus {
     color: #69728D;
-    font-weight: 400;
 }
-
-
 /* ================= SERVICES ================= */
-/*need to change the layout to match the prototype */
 .services {
+    font-family: 'Inter', sans-serif;
     padding: 110px 0;
     background: #0f172a;
     color: #e2e8f0;
 }
 
 .services h2 {
-    font-family: 'Jost', system-ui, sans-serif;
-    font-weight: 200;
+    font-family: 'Jost', sans-serif;
     text-align: center;
     font-size: 2.6rem;
     margin-bottom: 70px;
@@ -272,43 +284,82 @@ nav a:hover {
 }
 
 .contact h2 {
-    text-align: center;
-    margin-bottom: 60px;
-    font-size: 2.6rem;
+    text-align: left;
+    font-size: 2.35rem;
+    font-weight: 700;
+    color: #1f1f1f;
+    margin-bottom: 50px;
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+    position: relative;
+    display: inline-block;
+}
+
+.contact h2:after {
+    content: '';
+    position: absolute;
+    bottom: -16px;
+    left: 0;
+    width: 0;
+    height: 4px;
+    background: linear-gradient(to right, #FD7E1E, #F2AC70);
+    animation: lineGrow 1.6s ease-out forwards;
 }
 
 .contact-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 70px;
+    gap: 80px;
     align-items: start;
 }
 
 .contact-info p {
-    font-size: 1.15rem;
-    margin-bottom: 22px;
+    font-size: 1.1rem;
+    margin-bottom: 18px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
 }
 
 .contact-info i {
-    color: #F2AC70;
-    width: 28px;
+    color: #FD7E1E;
+    width: 24px;
+}
+
+/* Форма */
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
 }
 
 .contact-form input,
 .contact-form textarea {
     width: 100%;
     padding: 16px 20px;
-    margin-bottom: 20px;
-    border: 1px solid #ddd;
-    border-radius: 10px;
+    border: 1px solid #e0e0e0;
+    border-radius: 12px;
     font-size: 1.05rem;
+    transition: all 0.3s;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-color: #FD7E1E;
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(253, 126, 30, 0.15);
 }
 
 .contact-form textarea {
-    min-height: 160px;
+    min-height: 140px;
     resize: vertical;
 }
 
+.contact-form button {
+    align-self: flex-start;
+    padding: 16px 42px;
+    font-size: 1.1rem;
+}
 /* ================= FOOTER ================= */
 footer {
     background: #0a0a0a;
@@ -411,22 +462,10 @@ footer {
     }
 }
 
-.alert {
-    padding: 15px 20px;
-    margin-bottom: 30px;
-    border-radius: 10px;
-    text-align: center;
-    font-weight: 500;
+strong.watch {
+    color: #F38D36;   /* WATCH */
 }
 
-.alert-success {
-    background: #d4edda;
-    color: #155724;
-    border: 1px solid #c3e6cb;
-}
-
-.alert-error {
-    background: #f8d7da;
-    color: #721c24;
-    border: 1px solid #f5c6cb;
+strong.plus {
+    color: #69728D;   /* PLUS */
 }

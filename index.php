@@ -4,7 +4,8 @@
 <section class="hero">
     <div class="hero-overlay"></div>
     <div class="hero-content">
-        <h1><?= $translations['welcome'] ?> <span class="orange">WATCH</span><span>PLUS</span></h1>
+        <h1><?= $translations['welcome'] ?> <span style="color: #F38D36;">WATCH</span>
+        <span style="color: #69728D;">PLUS</span></h1>
         <p><?= $translations['hero_subtitle'] ?></p>
         <a href="#contact" class="btn"><?= $translations['btn_contact'] ?></a>
     </div>
@@ -75,21 +76,25 @@
 <!-- Contact -->
 <section id="contact" class="contact">
     <div class="container">
-    <?php if (isset($_GET['status'])): ?>
-    <div class="alert <?php echo $_GET['status'] === 'success' ? 'alert-success' : 'alert-error'; ?>">
-        <?php 
-        if ($_GET['status'] === 'success') {
-            echo $lang === 'ru' ? 'Спасибо! Ваше сообщение успешно отправлено.' : 
-                 ($lang === 'ro' ? 'Mulțumim! Mesajul a fost trimis cu succes.' : 
-                 'Thank you! Your message has been sent successfully.');
-        } else {
-            echo $lang === 'ru' ? 'Ошибка при отправке. Попробуйте позже.' : 
-                 ($lang === 'ro' ? 'Eroare la trimitere. Încercați mai târziu.' : 
-                 'Error sending message. Please try again later.');
-        }
-        ?>
-    </div>
-<?php endif; ?>
+        
+        <?php if (isset($_GET['success'])): ?>
+            <script>
+                const lang = "<?= $_GET['lang'] ?? 'ro' ?>";
+                let text = "Thank you! Your message has been sent successfully. We will contact you soon.";
+                
+                if (lang === 'ru') {
+                    text = "✅ Спасибо! Ваше сообщение успешно отправлено.\nМы свяжемся с вами в ближайшее время.";
+                } else if (lang === 'ro') {
+                    text = "✅ Mulțumim! Mesajul a fost trimis cu succes.\nVă vom contacta în curând.";
+                }
+                
+                alert(text);
+                
+                // Убираем параметр из URL
+                window.history.replaceState({}, '', window.location.pathname + "?lang=" + lang);
+            </script>
+        <?php endif; ?>
+
         <h2><?= $translations['contact_title'] ?></h2>
         <div class="contact-grid">
             <div class="contact-info">
@@ -98,7 +103,7 @@
                 <p><i class="fas fa-map-marker-alt"></i> <?= LEGAL_ADDRESS ?></p>
                 <p><i class="fas fa-map-marker-alt"></i> <?= OFFICE_ADDRESS ?></p>
             </div>
-            <!-- icons needs to be changed -->
+            
             <form action="mail/send.php" method="POST" class="contact-form">
                 <input type="text" name="name" placeholder="<?= $translations['name_placeholder'] ?>" required>
                 <input type="email" name="email" placeholder="<?= $translations['email_placeholder'] ?>" required>
@@ -108,5 +113,4 @@
         </div>
     </div>
 </section>
-
 <?php include 'includes/footer.php'; ?>

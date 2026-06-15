@@ -4,11 +4,11 @@ return [
     'hero_subtitle' => 'We offer solutions for telecommunications construction and maintenance.',
     
     'about_title' => 'About the company',
-    'about_text' => '<p><strong><span class="text-watch">WATCH</span><span class="text-plus">PLUS</span></strong> is a reliable partner in the field of telecommunications and complex engineering solutions.</p>
+    'about_text' => '<p><strong class="watch">WATCH</strong><strong class="plus">PLUS</strong> is a reliable partner in the field of telecommunications and complex engineering solutions.</p>
     <p>We specialize in the construction and maintenance of fiber-optic telecommunication networks, the design and installation of non-standard systems, as well as the integration of video surveillance, access control, personnel tracking, and other security technologies.</p>
-    <p>Although our company has been operating successfully for over 4 years, the <strong><span class="text-watch">WATCH</span><span class="text-plus">PLUS</span></strong> team brings together specialists with more than 10 years of experience. This allows us to implement projects of any complexity and deliver high-quality solutions to our clients and strategic partners – broadband internet providers.</p>
+    <p>Although our company has been operating successfully for over 4 years, the <strong class="watch">WATCH</strong><strong class="plus">PLUS</strong> team brings together specialists with more than 10 years of experience. This allows us to implement projects of any complexity and deliver high-quality solutions to our clients and strategic partners – broadband internet providers.</p>
     <p>Our mission is to be a trusted technology partner for telecom operators, businesses, and private clients, offering a full range of services: from building networks to connecting end-users and integrating security systems. We create infrastructure that connects people and companies, fostering sustainable development and technological leadership.</p>
-    <p>The <strong><span class="text-watch">WATCH</span><span class="text-plus">PLUS</span></strong> team consists of highly qualified professionals who value reliability, innovation, and long-term partnerships.</p>
+    <p>The <strong class="watch">WATCH</strong><strong class="plus">PLUS</strong> team consists of highly qualified professionals who value reliability, innovation, and long-term partnerships.</p>
     <p>We are trusted by leading telecom operators – a testament to the quality and responsibility of our company.</p>',
 
     'services_title' => 'Our Services',
