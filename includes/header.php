@@ -33,10 +33,12 @@ $translations = file_exists($lang_file) ? include $lang_file : include 'lang/ro.
             </div>
             
             <nav>
-                <ul id="nav-menu">
+                <ul>
                     <li><a href="#about"><?= $translations['about_title'] ?></a></li>
                     <li><a href="#services"><?= $translations['services_title'] ?></a></li>
                     <li><a href="#contact"><?= $translations['contact_title'] ?></a></li>
+                    <li><a href="#reviews"><?= $translations['reviews_title'] ?? 'Отзывы' ?></a></li>
+
                 </ul>
             </nav>
 
@@ -46,8 +48,5 @@ $translations = file_exists($lang_file) ? include $lang_file : include 'lang/ro.
                 <a href="?lang=ro" <?= $lang === 'ro' ? 'class="active"' : '' ?>>RO</a>
             </div>
 
-            <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Menu">
-                <i class="fas fa-bars"></i>
-            </button>
         </div>
     </header>

@@ -47,5 +47,11 @@ return [
     'phone_label' => 'Phone',
     'legal_address_label' => 'Legal Address',
     'office_address_label' => 'Office Address',
+
+    // === reviews ===
+    'reviews_title' => 'Reviews',
+    'leave_review_title' => 'Leave a Review', 
+    'submit_review_btn' => 'Post Review',
+    'no_reviews' => 'No reviews yet. Be the first to leave one!',
 ];
 ?>

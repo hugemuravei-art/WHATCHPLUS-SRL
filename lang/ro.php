@@ -41,5 +41,11 @@ return [
     'phone_label' => 'Telefon',
     'legal_address_label' => 'Adresă juridică',
     'office_address_label' => 'Adresă birou',
+
+     // Review
+    'reviews_title' => 'Recenzii',
+    'leave_review_title' => 'Lăsați un comentariu', 
+    'submit_review_btn' => 'Publică recenzia',
+    'no_reviews' => 'Nu există recenzii încă. Fii primul care lasă una!',
 ];
 ?>

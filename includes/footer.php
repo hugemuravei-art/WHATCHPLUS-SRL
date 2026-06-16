@@ -1,6 +1,5 @@
 <?php 
-// includes/footer.php
-global $translations; // чтобы переводы были доступны
+global $translations;
 ?>
     <footer>
         <div class="container">

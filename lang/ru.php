@@ -18,7 +18,7 @@ return [
     'name_placeholder' => 'Ваше имя',
     'email_placeholder' => 'Ваш email',
     'message_placeholder' => 'Ваше сообщение',
-    'send_button' => 'Отправить сообщение',
+    'send_button' => 'Отправить',
 
     // Услуги
     'service1_title' => 'Строительство телекоммуникационных сетей',
@@ -41,5 +41,11 @@ return [
     'phone_label' => 'Телефон',
     'legal_address_label' => 'Юридический адрес',
     'office_address_label' => 'Адрес офиса',
+
+// Review
+    'reviews_title' => 'Отзывы',
+    'leave_review_title' => 'Оставьте свой отзыв', 
+    'submit_review_btn' => 'Опубликовать отзыв',
+    'no_reviews' => 'Пока нет отзывов. Будьте первым!',
 ];
 ?>
