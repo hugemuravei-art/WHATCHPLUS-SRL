@@ -34,4 +34,32 @@ document.addEventListener('DOMContentLoaded', function() {
     } else {
         console.error('Элементы меню не найдены!');
     }
+
+// Анимация линии при скролле
+const aboutH2 = document.querySelector('.about h2');
+
+function checkLine() {
+    const rect = aboutH2.getBoundingClientRect();
+    if (rect.top < window.innerHeight - 100) {
+        aboutH2.classList.add('animate');
+        window.removeEventListener('scroll', checkLine);
+    }
+}
+
+window.addEventListener('scroll', checkLine);
+checkLine(); 
+
+// Анимация линии - contact
+const contactH2 = document.querySelector('.contact h2');
+
+function checkContactLine() {
+    const rect = contactH2.getBoundingClientRect();
+    if (rect.top < window.innerHeight - 100) {
+        contactH2.classList.add('animate');
+        window.removeEventListener('scroll', checkContactLine);
+    }
+}
+
+window.addEventListener('scroll', checkContactLine);
+checkContactLine();
 });

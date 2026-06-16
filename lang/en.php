@@ -41,5 +41,11 @@ return [
 
     'service7_title' => 'Security Systems',
     'service7_desc'  => 'Comprehensive solutions for facility protection and threat prevention.',
+
+    // === Contact ===
+    'email_label' => 'Email',
+    'phone_label' => 'Phone',
+    'legal_address_label' => 'Legal Address',
+    'office_address_label' => 'Office Address',
 ];
 ?>

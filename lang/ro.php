@@ -35,5 +35,11 @@ return [
     'service6_desc'  => 'Montaj și configurare de interfoane audio și video pentru clădiri rezidențiale și comerciale.',
     'service7_title' => 'Sisteme de securitate',
     'service7_desc'  => 'Soluții complete pentru protecția obiectivelor și prevenirea amenințărilor.',
+
+    // Contact
+    'email_label' => 'Email',
+    'phone_label' => 'Telefon',
+    'legal_address_label' => 'Adresă juridică',
+    'office_address_label' => 'Adresă birou',
 ];
 ?>

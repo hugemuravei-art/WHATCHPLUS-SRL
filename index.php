@@ -4,8 +4,7 @@
 <section class="hero">
     <div class="hero-overlay"></div>
     <div class="hero-content">
-        <h1><?= $translations['welcome'] ?> <span style="color: #F38D36;">WATCH</span>
-        <span style="color: #69728D;">PLUS</span></h1>
+        <h1><?= $translations['welcome'] ?> <span class="orange">WATCH</span><span>PLUS</span></h1>
         <p><?= $translations['hero_subtitle'] ?></p>
         <a href="#contact" class="btn"><?= $translations['btn_contact'] ?></a>
     </div>
@@ -26,7 +25,6 @@
     <div class="container">
         <h2><?= $translations['services_title'] ?></h2>
         <div class="services-grid">
-            <!-- Need to change the layout to match the porototype -->
             <div class="service-card">
                 <img src="assets/images/service1.png" alt="">
                 <h3><?= $translations['service1_title'] ?></h3>
@@ -98,9 +96,13 @@
         <h2><?= $translations['contact_title'] ?></h2>
         <div class="contact-grid">
             <div class="contact-info">
+                <h3><?= $translations['email_label'] ?></h3>
                 <p><i class="fas fa-envelope"></i> sales@watchplus.md</p>
+                <h3><?= $translations['phone_label'] ?></h3>
                 <p><i class="fas fa-phone"></i> <?= PHONE ?></p>
+                <h3><?= $translations['legal_address_label'] ?></h3>
                 <p><i class="fas fa-map-marker-alt"></i> <?= LEGAL_ADDRESS ?></p>
+                <h3><?= $translations['office_address_label'] ?></h3>
                 <p><i class="fas fa-map-marker-alt"></i> <?= OFFICE_ADDRESS ?></p>
             </div>
             
